@@ -1,0 +1,54 @@
+.navbar{
+  top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 32px 0
+  rgba(0,0,0,0.37);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+}
+
+footer{
+  margin-bottom: 7px ;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  box-shadow: 0 8px 32px 0
+  rgba(0,0,0,0.37);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar-left{
+  text-align: right;
+  left: 0;
+  padding: 10px;
+}
+
+.navbar-right{
+  position: absolute;
+  text-align: right;
+  right: 0;
+  padding: 10px;
+}
+
+.nav-link:hover{
+  background-color: rgba(255,255,255,0.37);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  color: black;
+  border-radius: 10px;
+}
+
+.nav-link{
+  border-radius: 10px;
+}
+
+router-outlet{
+  margin: 10px;
+}
+

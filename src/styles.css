@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+  background: rgb(0,48,73);
+  background: linear-gradient(287deg, rgba(0,48,73,1) 0%, rgba(214,40,40,1) 50%, rgba(247,127,0,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  height: 100%;
+}/* You can add global styles to this file, and also import other style files */

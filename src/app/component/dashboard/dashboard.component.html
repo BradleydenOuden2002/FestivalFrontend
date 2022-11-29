@@ -1,0 +1,16 @@
+<div class="dashboard-page">
+<table class="table table-stripped">
+  <thead>
+  <tr>
+    <th>Naam</th>
+    <th>Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let event of listevt">
+    <td>{{event.name}}</td>
+    <td>{{event.type}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
