@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import {Token} from "../model/token";
-import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
-import {catchError, map, Observable} from "rxjs";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TokenService {
 
-  reponseStatus: number;
   private BaseUrl = "http://localhost:9090/api/v1/auth/token";
   constructor(private httpclient: HttpClient) { }
 

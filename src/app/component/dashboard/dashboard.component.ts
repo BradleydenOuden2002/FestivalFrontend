@@ -35,10 +35,12 @@ export class DashboardComponent implements OnInit {
         const longitude = position.coords.longitude;
         const latitude = position.coords.latitude;
         this.latlong = latitude+","+longitude;
-        this.getEventsLatLong();
+        return this.getEventsLatLong();
       });
     } else {
       console.log("No support for geolocation")
+      return this.getEvents();
     }
+    return this.getEvents()
   }
 }

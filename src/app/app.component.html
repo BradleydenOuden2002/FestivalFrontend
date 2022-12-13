@@ -8,7 +8,7 @@
   </ul>
 </nav>
 <nav class="navbar navbar-expand-sm navbar-dark navbar-right" id="nav" [ngSwitch]="">
-  <ul class="navbar-nav" ng>
+  <ul class="navbar-nav" *ngIf="user == null">
     <li class="nav-item">
       <a routerLink="login" routerLinkActive="active" class="nav-link">Inloggen</a>
     </li>
