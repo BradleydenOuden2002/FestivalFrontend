@@ -1,25 +1,28 @@
 <div class="form">
   <h1 class="title">registeer</h1>
-<form (ngSubmit)="onSubmit()" [formGroup]="form">
-  <div class="form-group">
-    <input class="form-control" id="firstname" formControlName="firstname" name="firstname" placeholder="Voornaam*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" id="lastname" formControlName="lastname" name="lastname" placeholder="Achternaam*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" id="username" formControlName="username" name="username" placeholder="Gebruikersnaam*">
-  </div>
-  <div class="form-group">
-    <input class="form-control" id="email" formControlName="email" name="email" type="email" placeholder="Email*">
-  </div>
-  <div class="form-group password-group">
-    <input class="form-control" id="password" formControlName="password" name="password" type="password" placeholder="Wachtwoord*">
-    <input class="form-control" id="validatepassword" formControlName="validatepassword" name="validatepassword" type="password" placeholder="Herhaal wachtwoord*">
-  </div>
-  <div class="btn-group">
-  <button class="btn button" type="submit">registeer</button>
-  </div>
-</form>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div class="form-group">
+      <input class="form-control" id="firstname" formControlName="firstname" name="firstname" placeholder="Voornaam*">
+    </div>
+    <div class="form-group">
+      <input class="form-control" id="lastname" formControlName="lastname" name="lastname" placeholder="Achternaam*">
+    </div>
+    <div class="form-group">
+      <input class="form-control" id="username" formControlName="username" name="username"
+             placeholder="Gebruikersnaam*">
+    </div>
+    <div class="form-group">
+      <input class="form-control" id="email" formControlName="email" name="email" type="email" placeholder="Email*">
+    </div>
+    <div class="form-group password-group">
+      <input class="form-control" id="password" formControlName="password" name="password" type="password"
+             placeholder="Wachtwoord*">
+      <input class="form-control" id="validatepassword" formControlName="validatepassword" name="validatepassword"
+             type="password" placeholder="Herhaal wachtwoord*">
+    </div>
+    <div class="btn-group">
+      <button class="btn button" type="submit">registeer</button>
+    </div>
+  </form>
   <a routerLink="/login" routerLinkActive="active" class="nav-link">All een account?</a>
 </div>

@@ -9,16 +9,20 @@ import {NavigationEnd, Router} from "@angular/router";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  public $LoggedIn : boolean
+export class AppComponent implements OnInit {
+  public $LoggedIn: boolean
   user: User;
+
   constructor(userservice: UserService, private communicationservice: CommunicationService, router: Router) {
-    userservice.GetUser().subscribe(data => {this.user = data})
+    userservice.GetUser().subscribe(data => {
+      this.user = data
+    })
   }
 
   ngOnInit() {
 
     console.log(this.$LoggedIn)
   }
+
   title = 'Frontend';
 }
