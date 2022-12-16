@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthenticationService} from "../../Service/authentication.service";
 import {Router} from "@angular/router";
+import {CommunicationService} from "../../Service/communication.service";
 
 @Component({
   selector: 'app-login',
@@ -10,14 +11,15 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
+  @Output() recieveChildData: EventEmitter<boolean> = new EventEmitter();
   errorMessage: string;
   form = new FormGroup({
     username: new FormControl(null, Validators.required),
     password: new FormControl(null, Validators.required)
   })
-  Show:boolean = false;
 
-  constructor(private authservice: AuthenticationService, public router: Router) { }
+  constructor(private authservice: AuthenticationService, private communicationserivce: CommunicationService, public router: Router) {
+  }
 
   ngOnInit(): void {
   }
@@ -29,7 +31,8 @@ export class LoginComponent implements OnInit {
     this.authservice.setToken(username, password)
       .subscribe({
           next: () => {
-            this.router.navigate(['dashboard'])
+            this.communicationserivce.changeData(true);  //invoke new Data
+            this.router.navigate(['dashboard']);
           }
         }
       )

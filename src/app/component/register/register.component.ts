@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {UserService} from "../../Service/user.service";
 import {User} from "../../model/user";
@@ -12,6 +12,7 @@ import {Router} from "@angular/router";
 export class RegisterComponent implements OnInit {
 
   private user = new User;
+
   constructor(private userservice: UserService, public router: Router) {
   }
 
@@ -28,14 +29,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    this.user.firstname  = String(this.form.get('firstname')?.value);
+    this.user.firstname = String(this.form.get('firstname')?.value);
     this.user.lastname = String(this.form.get('lastname')?.value);
     this.user.username = String(this.form.get('username')?.value);
     this.user.email = String(this.form.get('email')?.value);
     let password = String(this.form.get('password')?.value);
     let validatepassword = String(this.form.get('validatepassword')?.value);
 
-    if (password == validatepassword){
+    if (password == validatepassword) {
       this.userservice.register(this.user, password).subscribe(
         {
           next: () => {

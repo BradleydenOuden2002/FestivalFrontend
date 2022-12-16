@@ -1,47 +1,45 @@
-form{
+form {
   width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-input{
+input {
   margin-bottom: 5px;
   margin-top: 5px;
 }
 
-.password-group{
+.password-group {
   margin-top: 20px;
 }
 
-.title{
+.title {
   text-align: center;
   color: lightgray;
   margin: 10px;
 }
 
-.nav-link{
+.nav-link {
   color: black;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: lightgray;
 }
 
-.form{
+.form {
   top: 10px;
   width: 510px;
   margin: auto;
-  box-shadow: 0 8px 32px 0
-  rgba(0,0,0,0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
 }
 
-.button{
-  box-shadow: 0 8px 32px 0
-  rgba(0,0,0,0.37);
+.button {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 10px;
 }
